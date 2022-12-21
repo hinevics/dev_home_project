@@ -1,4 +1,4 @@
-# TODO: Написать генератор для таблицы user
+# NOTE: Написать генератор для таблицы user
 
 # from typing import Any, Tuple
 from faker import Faker
@@ -25,9 +25,9 @@ class GenerationUser:
         return self.__faker.date_of_birth(minimum_age=18, maximum_age=50)
 
     def gen_email(self):
-        pass
+        return self.__faker.free_email()
 
 
 if __name__ == '__main__':
     g = GenerationUser()
-    print(g.date_birth)
+    print(type(g.date_birth))
